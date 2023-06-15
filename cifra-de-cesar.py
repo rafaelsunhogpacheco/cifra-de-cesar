@@ -26,17 +26,3 @@ def deCodificarMensagem(msg):
             letraNova = alfabeto[(posicao - 3)]
         msgDeCripto = msgDeCripto + letraNova
     return msgDeCripto
-
-
-
-
-
-
-criptografar = codificarMensagem('a ligeira raposa marrom saltou sobre o cachorro cansado')
-
-print(criptografar)
-
-deCriptografar = deCodificarMensagem(criptografar)
-
-print(deCriptografar)
-
