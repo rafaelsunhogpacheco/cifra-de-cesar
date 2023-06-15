@@ -11,5 +11,19 @@ def codificarMensagem(mensagem):
             msgCripto = msgCripto + letraNova
     return msgCripto
 
-teste = print(codificarMensagem('bola'))
+def deCodificarMensagem(msg):
+    alfabeto =  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    msgDeCripto = ''
+    msg = str(msg)
+    msg = msg.lower()
+    for letra in msg:
+        if letra in alfabeto:
+            posicao = alfabeto.index(letra)
+            letraNova = alfabeto[(posicao - 3)]
+            msgDeCripto = msgDeCripto + letraNova
+    return msgDeCripto
+
+teste = print(codificarMensagem('rafael'))
+
+teste2 = print(deCodificarMensagem(teste))
 
