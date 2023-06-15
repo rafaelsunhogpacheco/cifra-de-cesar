@@ -5,10 +5,12 @@ def codificarMensagem(mensagem):
     mensagem = str(mensagem)
     mensagem = mensagem.lower()
     for letra in mensagem:
-        if letra in alfabeto:
+        if letra == ' ':
+            letraNova = ' '
+        elif letra in alfabeto:
             posicao = alfabeto.index(letra)
             letraNova = alfabeto[(posicao + 3)]
-            msgCripto = msgCripto + letraNova
+        msgCripto = msgCripto + letraNova
     return msgCripto
 
 def deCodificarMensagem(msg):
@@ -17,13 +19,20 @@ def deCodificarMensagem(msg):
     msg = str(msg)
     msg = msg.lower()
     for letra in msg:
-        if letra in alfabeto:
+        if letra == ' ':
+            letraNova = ' '
+        elif letra in alfabeto:
             posicao = alfabeto.index(letra)
             letraNova = alfabeto[(posicao - 3)]
-            msgDeCripto = msgDeCripto + letraNova
+        msgDeCripto = msgDeCripto + letraNova
     return msgDeCripto
 
-criptografar = codificarMensagem('rafael')
+
+
+
+
+
+criptografar = codificarMensagem('a ligeira raposa marrom saltou sobre o cachorro cansado')
 
 print(criptografar)
 
