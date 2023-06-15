@@ -23,7 +23,11 @@ def deCodificarMensagem(msg):
             msgDeCripto = msgDeCripto + letraNova
     return msgDeCripto
 
-teste = print(codificarMensagem('rafael'))
+criptografar = codificarMensagem('rafael')
 
-teste2 = print(deCodificarMensagem(teste))
+print(criptografar)
+
+deCriptografar = deCodificarMensagem(criptografar)
+
+print(deCriptografar)
 
